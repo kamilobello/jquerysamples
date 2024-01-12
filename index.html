@@ -7,22 +7,128 @@
         <link rel="stylesheet" href="jqueryui/jquery-ui.css">
         <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
         <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+        
+        <style>
+            table {
+              width: 100%;
+              border-collapse: collapse;
+              margin-top: 20px;
+            }
+        
+            th, td {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+        
+            th {
+              background-color: #f2f2f2;
+            }
+            .selected { 
+                color: red;
+            }
+            .alt { 
+                background-color: beige;
+            }
+          </style>
     </head>
     <body>
-        <ul>
-            <li class="item">1</li>
-            <li class="item">2</li>
-            <li class="item">3</li>
-            <li class="item">4</li>
-        </ul>
-        <div id="total">
-            <p>Total: <span></span></p>
+        
+        <h2>Inventario de Stock</h2>
+
+        <div id="topics">
+            <a href="topics/all.html" class="selected">All</a>
+            <a href="topics/laptop.html">Laptop</a>
+            <a href="topics/mouse.html">Mouse</a>
+            <a href="topics/teclado.html">Teclado</a>
         </div>
-        <div id="average">
-            <p>Average: <span></span></p>
-        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Laptop</td>
+                    <td>5</td>
+                    <td>$800</td>
+                    <td>$4000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mouse</td>
+                    <td>20</td>
+                    <td>$20</td>
+                    <td>$400</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Teclado</td>
+                    <td>10</td>
+                    <td>$50</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Laptop</td>
+                    <td>5</td>
+                    <td>$800</td>
+                    <td>$4000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Laptop</td>
+                    <td>5</td>
+                    <td>$800</td>
+                    <td>$4000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Laptop</td>
+                    <td>5</td>
+                    <td>$800</td>
+                    <td>$4000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mouse</td>
+                    <td>20</td>
+                    <td>$20</td>
+                    <td>$400</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mouse</td>
+                    <td>20</td>
+                    <td>$20</td>
+                    <td>$400</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mouse</td>
+                    <td>20</td>
+                    <td>$20</td>
+                    <td>$400</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Laptop</td>
+                    <td>5</td>
+                    <td>$800</td>
+                    <td>$4000</td>
+                </tr>
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="jqueryui/jquery-ui.js"></script>
-        <script src="js/pluggins/0.4.js"></script>
+        <script src="js/selectingtraversing/0.1.js"></script>
     </body>
 </html>
