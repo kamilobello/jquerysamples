@@ -18,7 +18,6 @@ $(() => {
      .click((e) => {
         e.preventDefault();
         const topic = $(e.target).text();
-        console.log(topic)
 
         $(e.target)
             .addClass('selected')
@@ -63,6 +62,7 @@ $(() => {
         $.each(rows, function (index, row) {
             $('tbody').append(row);
         });
+        stripe();
      });
 
 });
