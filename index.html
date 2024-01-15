@@ -9,126 +9,76 @@
         <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
         
         <style>
-            table {
+            .gallery {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+              gap: 10px;
+            }
+        
+            .photo {
+              position: relative;
+              overflow: hidden;
+              border-radius: 8px;
+            }
+        
+            .photo img {
               width: 100%;
-              border-collapse: collapse;
-              margin-top: 20px;
+              height: auto;
+              display: block;
+              border-radius: 8px;
             }
         
-            th, td {
-              border: 1px solid #dddddd;
-              text-align: left;
-              padding: 8px;
+            .details {
+              display: flex;
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              background-color: rgba(0, 0, 0, 0.7);
+              color: #fff;
+              transition: opacity 0.3s ease;
             }
-        
-            th {
-              background-color: #f2f2f2;
-            }
-            .selected { 
-                color: red;
-            }
-            .alt { 
-                background-color: beige;
+                
+            .details p {
+              margin: 0;
             }
           </style>
     </head>
     <body>
         
-        <h2>Inventario de Stock</h2>
-
-        <div id="topics">
-            <a href="topics/all.html" class="selected">All</a>
-            <a href="topics/laptop.html">Laptop</a>
-            <a href="topics/mouse.html">Mouse</a>
-            <a href="topics/teclado.html">Teclado</a>
+        <h2>Galería de Fotos</h2>
+      
+        <div class="gallery" id="gallery">
+            <div class="photo">
+                <img src="https://picsum.photos/seed/123/200/300" alt="Imagen 1">
+                <div class="details">
+                    <p>Descripcion 1</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="https://picsum.photos/seed/345/200/300" alt="Imagen 1">
+                <div class="details">
+                    <p>Descripcion 2</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="https://picsum.photos/seed/456/200/300" alt="Imagen 1">
+                <div class="details">
+                    <p>Descripcion 3</p>
+                </div>
+            </div>
+          <!-- Agrega más imágenes según sea necesario -->
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Mouse</td>
-                    <td>20</td>
-                    <td>$20</td>
-                    <td>$400</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Teclado</td>
-                    <td>10</td>
-                    <td>$50</td>
-                    <td>$500</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Mouse</td>
-                    <td>20</td>
-                    <td>$20</td>
-                    <td>$400</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Mouse</td>
-                    <td>20</td>
-                    <td>$20</td>
-                    <td>$400</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Mouse</td>
-                    <td>20</td>
-                    <td>$20</td>
-                    <td>$400</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
-                <!-- Agrega más filas según sea necesario -->
-            </tbody>
-        </table>
+        <a id="more-photos" href="https://picsum.photos/v2/list?page=$param&limit=5">Morre Photos</a>
+      
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="jqueryui/jquery-ui.js"></script>
-        <script src="js/selectingtraversing/0.1.js"></script>
+        <script src="js/events/0.4.js"></script>
     </body>
 </html>
