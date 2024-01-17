@@ -40,105 +40,61 @@
                 display: inline;
                 content: '↑';
             }
+            label {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            input {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+            }
+
+            button {
+                padding: 10px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
           </style>
     </head>
     <body>
         
-        <h2>Inventario de Stock</h2>
+        <h2 id="mydesc">Repositorios de github</h2>
+
+        <form id="githubForm" action="https://github.com/search" method="get">
+            <label for="username">Nombre de usuario de GitHub:</label>
+            <input type="text" id="username" name="username" required>
+
+            <button type="submit">Obtener información</button>
+        </form>
 
         <div id="topics">
-            <a href="topics/all.html" class="selected">All</a>
-            <a href="topics/laptop.html">Laptop</a>
-            <a href="topics/mouse.html">Mouse</a>
-            <a href="topics/teclado.html">Teclado</a>
+            <a href="columns/all.html" class="selected">All</a>
+            <a href="columns/angular.html">Angular</a>
+            <a href="columns/react.html">React</a>
+            <a href="columns/javascript.html">javascript</a>
         </div>
 
-        <table>
+        <table id="repos" aria-describedby="mydesc">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
-                    <th>Total</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>URL</th>
+                    <th>Is private</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Mouse</td>
-                    <td>20</td>
-                    <td>$20</td>
-                    <td>$400</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Teclado</td>
-                    <td>10</td>
-                    <td>$50</td>
-                    <td>$500</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Mouse</td>
-                    <td>20</td>
-                    <td>$20</td>
-                    <td>$400</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Mouse</td>
-                    <td>20</td>
-                    <td>$20</td>
-                    <td>$400</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Mouse</td>
-                    <td>20</td>
-                    <td>$20</td>
-                    <td>$400</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>$800</td>
-                    <td>$4000</td>
-                </tr>
                 <!-- Agrega más filas según sea necesario -->
             </tbody>
         </table>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="jqueryui/jquery-ui.js"></script>
-        <script src="js/selectingtraversing/0.1.js"></script>
+        <script src="js/ajax/0.2.js"></script>
     </body>
 </html>
